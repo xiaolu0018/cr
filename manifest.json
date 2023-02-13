@@ -8,55 +8,32 @@
   // 插件描述
   "description": "必应/谷歌/百度隐藏footer",
   // 图标，一般偷懒全部用一个尺寸的也没问题
-  "icons":
-  {
-  "16": "img/logo.jpg",
-  "48": "img/logo.jpg",
-  "128": "img/logo.jpg"
+  "icons": {
+    "16": "img/logo.jpg",
+    "48": "img/logo.jpg",
+    "128": "img/logo.jpg"
   },
-  // 浏览器右上角图标设置，browser_action、page_action、app必须三选一
-
-  // 当某些特定页面打开才显示的图标
-  /*"page_action":
-  {
-  "default_icon": "img/icon.png",
-  "default_title": "我是pageAction",
-  "default_popup": "popup.html"
-  },*/
-  // "background": {  // 配置插件在后台运行的js代码，及其行为
-  //   // "scripts": ["<js_file1>","<js_file2>"],
-  //   // Recommended
-  //   "persistent": false  // 后台运行方式，true-始终运行，false-按需运行
-  //   // Optional
-  //   // "service_worker": "", // 离线网络代理，能够处理控制页面发送的请求
-  // },
   "background": {
     "service_worker": "1.js"
   },
   // 需要直接注入页面的JS
-  "content_scripts":
-  [
-  {
-  //"matches": ["http://*/*", "https://*/*"],
-  // "<all_urls>" 表示匹配所有地址
-  "matches": ["https://cn.bing.com/*","https://www.google.com.hk/*","https://www.baidu.com/", "https://baidu.com/", "https://www.baidu.com/?tn=baiduhome_pg"],
-  // 多个JS按顺序注入
-  "js": ["custom.js"],
-  // JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
-  // "css": ["custom.css"],
-
-  "run_at": "document_start"
-  }
-
-
+  "content_scripts": [
+    {
+      //"matches": ["http://*/*", "https://*/*"],
+      // "<all_urls>" 表示匹配所有地址
+      "matches": [
+        "https://cn.bing.com/*",
+        "https://www.google.com.hk/*",
+        "https://www.baidu.com/",
+        "https://baidu.com/",
+        "https://www.baidu.com/?tn=baiduhome_pg"
+      ],
+      "js": ["custom.js"],
+      "run_at": "document_start"
+    }
   ],
   // 权限申请
-  "permissions":
-  [
-
-  "tabs"// 标签
-
+  "permissions": [
+    "tabs" // 标签
   ]
-
-
-  }
+}
