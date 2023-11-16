@@ -2,7 +2,7 @@
   // 清单文件的版本，这个必须写，而且必须是2,MV2版本的chrome插件在2023年停止支持。将 manifest_version 的版本号改成 3
   "manifest_version": 3,
   // 插件的名称
-  "name": "必应/谷歌/百度隐藏footer",
+  "name": "必应/谷歌/百度隐藏footer和热点",
   // 插件的版本
   "version": "1.0.0",
   // 插件描述
