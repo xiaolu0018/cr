@@ -1,3 +1,9 @@
+/**
+ * @fileName custom2.js
+ * @description 百度
+ * @date 2024-10-14 13:58:39
+ * @author lxl
+ */
 console.log("========= this is my plugin ======");
 document.addEventListener("DOMContentLoaded", function () {
   const hideDomStyle =

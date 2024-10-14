@@ -9,9 +9,9 @@
   "description": "必应/谷歌/百度隐藏footer，必应首页隐藏今日热点",
   // 图标，一般偷懒全部用一个尺寸的也没问题
   "icons": {
-    "16": "img/logo.jpg",
-    "48": "img/logo.jpg",
-    "128": "img/logo.jpg"
+    "16": "./img/logo.jpg",
+    "48": "./img/logo.jpg",
+    "128": "./img/logo.jpg"
   },
   "background": {
     "service_worker": "1.js"
